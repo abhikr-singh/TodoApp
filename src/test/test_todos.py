@@ -1,12 +1,13 @@
 from fastapi import status
-from ..main import app
 from ..routers.todos import get_db, get_current_user
 from ..models import Todos
 from .utils import (
+    app,
     TestingSessionLocal,
     client,
     override_get_db,
     override_get_current_user,
+    test_todo,
 )
 
 app.dependency_overrides[get_db] = override_get_db
