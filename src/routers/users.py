@@ -9,7 +9,7 @@ from passlib.context import CryptContext
 from starlette import status
 from .auth import get_current_user
 
-router = APIRouter(prefix="/users", tags=["users"])
+router = APIRouter(prefix="/user", tags=["user"])
 
 
 def get_db():
